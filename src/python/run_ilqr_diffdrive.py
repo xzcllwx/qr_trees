@@ -11,12 +11,12 @@ import os
 full_path = os.path.realpath(__file__)
 if full_path.count("src/python") > 0:
     import sys
-    to_add = os.path.abspath(os.path.join(os.path.split(full_path)[0], "../../build/"))
+    to_add = os.path.abspath(os.path.join(os.path.split(full_path)[0], "../../build/lib/"))
     sys.path.append(to_add)
 
 from IPython import embed
 
-import lib.ilqr_diffdrive as ilqr
+import ilqr_diffdrive as ilqr
 import visualize_circle_world as vis
 
 import numpy as np
